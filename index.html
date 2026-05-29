@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servirov — Robótica Submarina y Servicios Acuícolas</title>
+    
+    <!-- Meta tags SEO -->
+    <meta name="description" content="Servirov realiza proyectos de robótica submarina, buceo profesional, inspecciones submarinas de redes, fondeos y fondos marinos en Hornopirén y Puerto Montt desde 2018.">
+    <meta name="keywords" content="servirov, robótica submarina, buceo profesional, acuicultura chile, inspeccion de redes, fondeos, hornopiren, puerto montt, salmones camanchaca">
+    <meta name="author" content="Servirov">
+    
+    <!-- OpenGraph Meta tags -->
+    <meta property="og:title" content="Servirov — Robótica Submarina y Servicios Acuícolas">
+    <meta property="og:description" content="Operaciones submarinas con ROVs de alta tecnología y buceo profesional. Calidad, compromiso y cero fallas desde 2018.">
+    <meta property="og:image" content="https://servirov.cl/wp-content/uploads/2026/03/freepik_mejora-todo_0001.png">
+    <meta property="og:url" content="https://servirov.cl/">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas para el fondo interactivo de partículas de agua -->
+    <canvas id="water-backdrop"></canvas>
+
+    <!-- Header flotante premium -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="#inicio" class="logo-link" id="logo-header">
+                <img src="https://servirov.cl/wp-content/uploads/elementor/thumbs/25-x-50-logo-png-1-q8qnepaa5kz9hhhg6ty16h9907wqgbp92dpyzdtjb4.png" alt="Servirov Logo" class="logo-img">
+                <span class="logo-text">Servi<span>Rov</span></span>
+            </a>
+            
+            <nav id="navbar">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active" data-tab="inicio"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link" data-tab="servicios"><i class="fa-solid fa-anchor"></i> Servicios</a></li>
+                    <li><a href="#nosotros" class="nav-link" data-tab="nosotros"><i class="fa-solid fa-users"></i> Nosotros</a></li>
+                    <li><a href="#contacto" class="nav-link" data-tab="contacto"><i class="fa-solid fa-envelope"></i> Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="tel:+56996299010" class="btn-call-header" id="btn-header-call">
+                    <i class="fa-solid fa-phone"></i> <span>Llamar</span>
+                </a>
+                <button class="menu-toggle" id="mobile-menu-toggle" aria-label="Abrir Menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenedor Principal SPA -->
+    <main id="spa-container">
+
+        <!-- ================= SECTION INICIO ================= -->
+        <section id="inicio" class="spa-section active">
+            <!-- Hero Slider -->
+            <div class="hero-slider">
+                <div class="slider-wrapper">
+                    <div class="slide active" style="background-image: url('https://servirov.cl/wp-content/uploads/2023/07/120197615_626098091305788_1113656048694077727_n.jpg');"></div>
+                    <div class="slide" style="background-image: url('https://servirov.cl/wp-content/uploads/2023/06/101878707_554833725098892_7848911189062987782_n.jpg');"></div>
+                    <div class="slide" style="background-image: url('https://servirov.cl/wp-content/uploads/2023/06/285045960_978275662754694_1760124099140583034_n.jpg');"></div>
+                </div>
+                
+                <div class="hero-overlay"></div>
+                
+                <div class="hero-content">
+                    <h1 class="hero-title animate-up">Servirov<br><span>Servicios Acuáticos</span></h1>
+                    <p class="hero-subtitle animate-up delay-1">Líderes en robótica submarina, buceo comercial y continuidad operacional acuícola con tecnología ROV avanzada.</p>
+                    <div class="hero-buttons animate-up delay-2">
+                        <a href="#contacto" class="btn-primary" id="hero-btn-contact"><i class="fa-solid fa-paper-plane"></i> Cotizar Servicio</a>
+                        <a href="https://wa.me/56996299010" target="_blank" rel="noopener noreferrer" class="btn-secondary" id="hero-btn-whatsapp"><i class="fa-brands fa-whatsapp"></i> Chat WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="slider-dots">
+                    <span class="dot active" data-index="0"></span>
+                    <span class="dot" data-index="1"></span>
+                    <span class="dot" data-index="2"></span>
+                </div>
+            </div>
+
+            <!-- Quiénes Somos -->
+            <div class="container section-padding">
+                <div class="grid-2">
+                    <div class="about-text-column" id="about-intro">
+                        <span class="section-tag"><i class="fa-solid fa-circle-info"></i> ¿Quiénes somos?</span>
+                        <h2 class="section-title">Servirov Servicios Acuáticos y Robótica</h2>
+                        <p class="section-desc">Somos una empresa pionera y comprometida, dedicada a la prestación de servicios especializados en <strong>robótica submarina (ROVs), buceo profesional, inspección técnica</strong> y alimentación manual para la pujante industria salmonera en el sur de Chile.</p>
+                        
+                        <!-- Mini Grid Contadores -->
+                        <div class="counters-grid">
+                            <div class="counter-card" id="card-counter-clients">
+                                <div class="counter-icon-wrap">
+                                    <img src="https://servirov.cl/wp-content/uploads/elementor/thumbs/gss5561-q8g6fcwgtotz7smab1knbnsbolc3zvemugqnle6qyo.png" alt="Clientes Icon" class="counter-icon">
+                                </div>
+                                <div class="counter-num-wrap">
+                                    <span class="counter-number" data-target="2400">0</span><span class="counter-plus">+</span>
+                                </div>
+                                <p class="counter-label">Clientes Satisfechos</p>
+                            </div>
+                            
+                            <div class="counter-card" id="card-counter-projects">
+                                <div class="counter-icon-wrap">
+                                    <img src="https://servirov.cl/wp-content/uploads/elementor/thumbs/g5561-1-q8g6fcwgtotz7smab1knbnsbolc3zvemugqnle6qyo.png" alt="Proyectos Icon" class="counter-icon">
+                                </div>
+                                <div class="counter-num-wrap">
+                                    <span class="counter-number" data-target="4590">0</span><span class="counter-plus">+</span>
+                                </div>
+                                <p class="counter-label">Proyectos Exitosos</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-image-column" id="about-image-sub">
+                        <div class="image-glow-wrapper">
+                            <img src="https://servirov.cl/wp-content/uploads/2026/03/freepik_mejora-todo_0001.png" alt="Tecnología Submarina ROV" class="sub-hero-image img-responsive">
+                            <div class="floating-badge">
+                                <i class="fa-solid fa-microchip"></i>
+                                <span>Tecnología ROV Activa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video y Experiencia -->
+            <div class="dark-banner section-padding">
+                <div class="container">
+                    <div class="grid-2 items-center">
+                        <div class="video-container-column" id="experience-video">
+                            <div class="video-wrapper-glass">
+                                <video id="ops-video" src="https://servirov.cl/wp-content/uploads/2023/06/WhatsApp-Video-2023-06-28-at-1.05.04-PM.mp4" poster="https://servirov.cl/wp-content/uploads/2023/07/120197615_626098091305788_1113656048694077727_n.jpg" preload="metadata" muted playsinline></video>
+                                <button class="video-play-btn" id="play-pause-btn" aria-label="Reproducir video"><i class="fa-solid fa-play"></i></button>
+                                <div class="video-controls-custom">
+                                    <span class="video-time" id="video-time-display">0:00</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-text-column" id="experience-intro">
+                            <span class="section-tag"><i class="fa-solid fa-calendar-check"></i> Trayectoria Impecable</span>
+                            <h2 class="section-title">Proyectos con la mejor calidad y sin fallas en servicio</h2>
+                            <p class="section-desc">Desde mayo de 2018 a la fecha, operamos sin un solo día de falla técnica o interrupción operacional. Proveemos extracción de mortalidad altamente eficiente e inspecciones submarinas detalladas de redes loberas, redes peceras, fondeos y fondos marinos.</p>
+                            
+                            <div class="exp-badge-container">
+                                <div class="exp-badge">
+                                    <span class="exp-num">+5</span>
+                                    <span class="exp-lbl">Años de<br>Experiencia</span>
+                                </div>
+                                <div class="exp-check-list">
+                                    <div class="check-item"><i class="fa-solid fa-shield-halved"></i> 100% Continuidad Operativa</div>
+                                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> Cumplimiento Normativo de Buceo</div>
+                                    <div class="check-item"><i class="fa-solid fa-circle-check"></i> Informes de Inspección Detallados</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Por Qué Elegirnos -->
+            <div class="container section-padding">
+                <div class="text-center max-w-700 margin-auto-bottom-50">
+                    <span class="section-tag"><i class="fa-solid fa-star"></i> Compromiso Servirov</span>
+                    <h2 class="section-title">¿Por qué elegirnos como socios de operaciones?</h2>
+                    <p class="section-desc">Garantizamos precisión tecnológica y un fuerte vínculo con las comunidades locales donde operamos.</p>
+                </div>
+
+                <div class="grid-3 card-group-choose">
+                    <!-- Servicio Integral -->
+                    <div class="choose-card" id="choose-card-1">
+                        <div class="card-glow-element"></div>
+                        <div class="choose-card-icon">
+                            <img src="https://servirov.cl/wp-content/uploads/2023/06/g55s61.png" alt="Servicio Integral" class="icon-img">
+                        </div>
+                        <h3>Servicio Integral</h3>
+                        <p>Durante el año 2018, prestamos servicios de extracción de mortalidad e inspección en los centros de cultivo Marilmo y Loncochalgua de Salmones Camanchaca, cerrando las faenas sin fallas de ningún tipo.</p>
+                    </div>
+
+                    <!-- Comunidad -->
+                    <div class="choose-card" id="choose-card-2">
+                        <div class="card-glow-element"></div>
+                        <div class="choose-card-icon">
+                            <i class="fa-solid fa-people-carry-box choose-icon-fa"></i>
+                        </div>
+                        <h3>Servicio a la comunidad</h3>
+                        <p>En conjunto con Salmones Camanchaca, realizamos charlas de orientación a alumnos del Liceo Antupirén en Hornopirén. Además, dictamos cursos de robótica submarina con la OMIL Hualaihué, facilitando inserción laboral real.</p>
+                    </div>
+
+                    <!-- Apoyo Social -->
+                    <div class="choose-card" id="choose-card-3">
+                        <div class="card-glow-element"></div>
+                        <div class="choose-card-icon">
+                            <i class="fa-solid fa-handshake-angle choose-icon-fa"></i>
+                        </div>
+                        <h3>Apoyo Social</h3>
+                        <p>Durante los meses críticos de la pandemia, colaboramos activamente con la Fundación Bazar Solidario, entregando cajas familiares a hogares vulnerables para mitigar el impacto socioeconómico en la comuna.</p>
+                    </div>
+                </div>
+
+                <div class="operations-showcase margin-top-50">
+                    <div class="grid-2 bg-glass-card rounded-24 overflow-hidden border-glass items-center">
+                        <div class="ops-images-collage">
+                            <div class="ops-img-wrap">
+                                <img src="https://servirov.cl/wp-content/uploads/2023/07/compromiso-social-comunidad.jpg" alt="Compromiso Social Comunidad" class="collage-img img-responsive">
+                            </div>
+                            <div class="ops-img-wrap">
+                                <img src="https://servirov.cl/wp-content/uploads/2023/07/120316777_626098041305793_4243904303659359713_n.jpg" alt="Operaciones Submarinas Buceo" class="collage-img img-responsive">
+                            </div>
+                        </div>
+                        <div class="ops-text-column section-padding">
+                            <span class="badge-mini"><i class="fa-solid fa-gears"></i> Operaciones Activas</span>
+                            <h3>Grandes Empresas Confían en Nosotros</h3>
+                            <p>Hemos prestado servicios de alto nivel a empresas de clase mundial como <strong>Salmones Camanchaca, Granja Marina Tornagaleones y Mowi</strong>, posicionándonos como líderes operacionales confiables en la Patagonia.</p>
+                            <a href="https://www.salmonexpert.cl/acucola-chile-emprendimiento/boom-de-los-rovs-acucolas-incentiva-el-emprendimiento-regional/1187825" target="_blank" rel="noopener noreferrer" class="btn-link" id="link-salmonexpert">
+                                Leer artículo en SalmonExpert <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION SERVICIOS ================= -->
+        <section id="servicios" class="spa-section">
+            <div class="services-hero-banner" style="background-image: linear-gradient(rgba(2, 8, 19, 0.85), rgba(2, 8, 19, 0.95)), url('https://servirov.cl/wp-content/uploads/2023/07/WhatsApp-Image-2023-06-28-at-1.00.17-PM-1.jpeg');">
+                <div class="container text-center">
+                    <span class="section-tag"><i class="fa-solid fa-anchor"></i> Lo que Hacemos</span>
+                    <h1 class="page-title">Servicios de Ingeniería Submarina</h1>
+                    <p class="page-subtitle max-w-600 margin-auto">Soluciones especializadas bajo el agua con el más alto nivel de seguridad, precisión robótica y resultados comprobables.</p>
+                </div>
+            </div>
+
+            <div class="container section-padding">
+                <div class="grid-3 card-group-services">
+                    <!-- Servicio Robótica -->
+                    <div class="service-card" id="service-card-rov">
+                        <div class="service-card-media">
+                            <img src="https://servirov.cl/wp-content/uploads/2023/07/WhatsApp-Image-2023-06-28-at-12.53.51-PM.jpeg" alt="Servicio de Robótica" class="service-img">
+                            <div class="service-icon-badge">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Servicio de Robótica (ROV)</h3>
+                            <p>Realizamos filmaciones, inspecciones complejas de fondeos y redes loberas, y soporte en operaciones submarinas críticas utilizando vehículos operados en remoto (ROVs) de alta precisión.</p>
+                            <button class="btn-service-details" data-service="robotica">Saber Más <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio Buceo -->
+                    <div class="service-card" id="service-card-dive">
+                        <div class="service-card-media">
+                            <img src="https://servirov.cl/wp-content/uploads/2023/07/WhatsApp-Image-2023-06-28-at-1.00.15-PM.jpeg" alt="Buceo Profesional" class="service-img">
+                            <div class="service-icon-badge">
+                                <i class="fa-solid fa-person-swimming"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Buceo Profesional</h3>
+                            <p>Ofrecemos cuadrillas de buceo comercial altamente capacitadas para intervenciones directas, apoyo en siembra y cosecha, reparaciones de redes submarinas y rescates operacionales.</p>
+                            <button class="btn-service-details" data-service="buceo">Saber Más <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Servicio Inspección -->
+                    <div class="service-card" id="service-card-inspection">
+                        <div class="service-card-media">
+                            <img src="https://servirov.cl/wp-content/uploads/2023/07/101939144_556124918303106_3776436333504564512_n.jpg" alt="Inspección y Alimentación" class="service-img">
+                            <div class="service-icon-badge">
+                                <i class="fa-solid fa-clipboard-list"></i>
+                            </div>
+                        </div>
+                        <div class="service-card-body">
+                            <h3>Inspección y Alimentación Manual</h3>
+                            <p>Inspección de fondos marinos e informes biológicos. Personal capacitado para alimentación manual precisa, garantizando la optimización de los ratios de conversión de alimento.</p>
+                            <button class="btn-service-details" data-service="inspeccion">Saber Más <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modales Dinámicos para Detalles de Servicio -->
+            <div class="modal-overlay" id="service-modal-overlay">
+                <div class="modal-container-glass">
+                    <button class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar modal"><i class="fa-solid fa-xmark"></i></button>
+                    
+                    <div class="modal-content-details" id="modal-content-details">
+                        <!-- Se llena dinámicamente con JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION NOSOTROS ================= -->
+        <section id="nosotros" class="spa-section">
+            <div class="services-hero-banner" style="background-image: linear-gradient(rgba(2, 8, 19, 0.85), rgba(2, 8, 19, 0.95)), url('https://servirov.cl/wp-content/uploads/2023/07/compromiso-ambiental-limpieza-de-playas.jpg');">
+                <div class="container text-center">
+                    <span class="section-tag"><i class="fa-solid fa-users"></i> Identidad Corporativa</span>
+                    <h1 class="page-title">Nosotros</h1>
+                    <p class="page-subtitle max-w-600 margin-auto">Conoce los valores corporativos y la filosofía de trabajo que nos impulsa a superarnos bajo el mar día a día.</p>
+                </div>
+            </div>
+
+            <!-- Misión -->
+            <div class="container section-padding">
+                <div class="grid-2 items-center">
+                    <div class="nosotros-image-wrap" id="nosotros-img-mision">
+                        <div class="border-glass-radius rounded-24 overflow-hidden">
+                            <img src="https://servirov.cl/wp-content/uploads/2023/07/compromiso-ambiental-limpieza-de-playas.jpg" alt="Compromiso Ambiental Limpieza Playas" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="nosotros-text-wrap" id="nosotros-text-mision">
+                        <span class="section-tag"><i class="fa-solid fa-compass"></i> El Rumbo</span>
+                        <h2 class="section-title">Nuestra Misión</h2>
+                        <p class="section-desc">Satisfacer a plenitud cada uno de los servicios demandados por la exigente industria salmonera regional, aplicando un sello distintivo forjado a través de la vasta experiencia en acuicultura de nuestro equipo, impulsados por un alto espíritu de compromiso, eficiencia e innovación técnica con todos los procesos productivos de nuestros clientes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visión -->
+            <div class="dark-banner section-padding">
+                <div class="container">
+                    <div class="grid-2 items-center reverse-column">
+                        <div class="nosotros-text-wrap" id="nosotros-text-vision">
+                            <span class="section-tag"><i class="fa-solid fa-eye"></i> El Destino</span>
+                            <h2 class="section-title">Nuestra Visión</h2>
+                            <p class="section-desc">Consolidar a ServiRov como la empresa líder de referencia en la prestación de servicios de operaciones submarinas de la Patagonia. Nos esforzamos por entregar siempre un servicio de máxima calidad e integridad que genere total confianza y tranquilidad, constituyendo el soporte más fiable para los centros de cultivo acuícola, a la vez que garantizamos el bienestar absoluto y la seguridad de nuestro personal.</p>
+                        </div>
+                        <div class="nosotros-image-wrap" id="nosotros-img-vision">
+                            <div class="border-glass-radius rounded-24 overflow-hidden">
+                                <img src="https://servirov.cl/wp-content/uploads/2023/07/120316777_626098041305793_4243904303659359713_n.jpg" alt="Visión Operaciones" class="img-responsive">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Valores -->
+            <div class="container section-padding">
+                <div class="grid-2 items-center">
+                    <div class="nosotros-image-wrap" id="nosotros-img-valores">
+                        <div class="border-glass-radius rounded-24 overflow-hidden">
+                            <img src="https://servirov.cl/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2023-06-28-at-1.00.15-PM-q9zspr3hrc87grlof7chi4ruj1afshgx45wag1yeps.jpeg" alt="Personal de Buzos y Equipos" class="img-responsive">
+                        </div>
+                    </div>
+                    <div class="nosotros-text-wrap" id="nosotros-text-valores">
+                        <span class="section-tag"><i class="fa-solid fa-gem"></i> Cimientos</span>
+                        <h2 class="section-title">Nuestros Valores</h2>
+                        <p class="section-desc">Las bases éticas de ServiRov se fundamentan sólidamente en el <strong>respeto, la responsabilidad ineludible y la excelente convivencia laboral</strong>, tanto con las empresas mandantes como con nuestros trabajadores.</p>
+                        <p class="section-desc">Cumplimos estrictamente con la normativa laboral y ambiental vigente, potenciando los talentos individuales y persiguiendo un crecimiento sustentable que sea amigable con el ecosistema marino de Hornopirén.</p>
+                        
+                        <div class="counters-grid margin-top-30">
+                            <div class="counter-card mini" id="nosotros-counter-1">
+                                <div class="counter-num-wrap">
+                                    <span class="counter-number font-32" data-target="4500">0</span><span class="counter-plus">+</span>
+                                </div>
+                                <p class="counter-label text-12">Horas de Buceo Exitosas</p>
+                            </div>
+                            <div class="counter-card mini" id="nosotros-counter-2">
+                                <div class="counter-num-wrap">
+                                    <span class="counter-number font-32" data-target="7000">0</span><span class="counter-plus">+</span>
+                                </div>
+                                <p class="counter-label text-12">Metros de Inspección ROV</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SECTION CONTACTO ================= -->
+        <section id="contacto" class="spa-section">
+            <div class="services-hero-banner" style="background-image: linear-gradient(rgba(2, 8, 19, 0.85), rgba(2, 8, 19, 0.95)), url('https://servirov.cl/wp-content/uploads/2023/07/WhatsApp-Image-2023-06-28-at-1.00.17-PM-1.jpeg');">
+                <div class="container text-center">
+                    <span class="section-tag"><i class="fa-solid fa-envelope"></i> Conexión Directa</span>
+                    <h1 class="page-title">Contacto</h1>
+                    <p class="page-subtitle max-w-600 margin-auto">Estamos disponibles para responder tus requerimientos de forma rápida. Comunícate directamente con nuestro centro de operaciones.</p>
+                </div>
+            </div>
+
+            <!-- Mapa Interactivo en Vidrio -->
+            <div class="container margin-top-50">
+                <div class="google-map-glass rounded-24 border-glass overflow-hidden shadow-deep">
+                    <iframe loading="lazy" src="https://maps.google.com/maps?q=El%20Tepual%20N°8,%20Hornopirén&t=m&z=15&output=embed&iwloc=near" title="Ubicación Servirov en Hornopirén" aria-label="Ubicación de Oficina de Servirov" class="iframe-map"></iframe>
+                </div>
+            </div>
+
+            <!-- Datos de Contacto y Formulario -->
+            <div class="container section-padding">
+                <div class="grid-2">
+                    <!-- Datos de Contacto -->
+                    <div class="contact-info-column" id="contact-details">
+                        <span class="section-tag"><i class="fa-solid fa-phone-volume"></i> Comunicación Directa</span>
+                        <h2 class="section-title">Centro de Operaciones</h2>
+                        <p class="section-desc">¿Tienes un proyecto en mente, requieres filmación o asistencia en contingencias de mortalidad? Contáctanos a través de cualquiera de nuestros canales oficiales.</p>
+                        
+                        <div class="contact-methods-list">
+                            <!-- Fono -->
+                            <div class="contact-method-card bg-glass border-glass rounded-16">
+                                <div class="method-icon-wrap"><i class="fa-solid fa-phone"></i></div>
+                                <div class="method-body">
+                                    <span class="method-lbl">Llámanos</span>
+                                    <a href="tel:+56996299010" class="method-val">+56 9 9629 9010</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Correo -->
+                            <div class="contact-method-card bg-glass border-glass rounded-16">
+                                <div class="method-icon-wrap"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="method-body">
+                                    <span class="method-lbl">Envíanos un correo</span>
+                                    <a href="mailto:contacto@servirov.cl" class="method-val">contacto@servirov.cl</a>
+                                </div>
+                            </div>
+                            
+                            <!-- Dirección -->
+                            <div class="contact-method-card bg-glass border-glass rounded-16">
+                                <div class="method-icon-wrap"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="method-body">
+                                    <span class="method-lbl">Nuestra Oficina</span>
+                                    <p class="method-val-text">El Tepual N°8, Hornopirén, Comuna de Hualaihué.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-column" id="contact-form-container">
+                        <div class="bg-glass-card border-glass rounded-24 shadow-deep p-40">
+                            <h3>Escríbenos un Mensaje</h3>
+                            <p class="form-intro-desc text-14 opacity-80 margin-bottom-30">Completa el siguiente formulario y un ingeniero de operaciones se contactará contigo en menos de 2 horas hábiles.</p>
+                            
+                            <form id="contact-form-element" novalidate>
+                                <!-- Nombre -->
+                                <div class="form-group-custom">
+                                    <input type="text" id="form-name" required placeholder=" ">
+                                    <label for="form-name">Nombre Completo</label>
+                                    <span class="input-error-msg">Por favor ingresa tu nombre</span>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="form-group-custom">
+                                    <input type="email" id="form-email" required placeholder=" ">
+                                    <label for="form-email">Correo Electrónico</label>
+                                    <span class="input-error-msg">Ingresa un correo electrónico válido</span>
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="form-group-custom">
+                                    <input type="tel" id="form-phone" required placeholder=" ">
+                                    <label for="form-phone">Teléfono / WhatsApp</label>
+                                    <span class="input-error-msg">Por favor ingresa tu número telefónico</span>
+                                </div>
+
+                                <!-- Mensaje -->
+                                <div class="form-group-custom">
+                                    <textarea id="form-message" required rows="4" placeholder=" "></textarea>
+                                    <label for="form-message">Detalles del Requerimiento</label>
+                                    <span class="input-error-msg">Por favor escribe tu mensaje</span>
+                                </div>
+
+                                <button type="submit" class="btn-submit-form" id="btn-submit-contact">
+                                    <span class="btn-text">Enviar Mensaje <i class="fa-solid fa-paper-plane"></i></span>
+                                    <span class="btn-spinner"></span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feedback Modal Premium al enviar formulario -->
+            <div class="modal-overlay" id="feedback-modal-overlay">
+                <div class="modal-container-glass feedback-modal">
+                    <div class="feedback-success-animation">
+                        <div class="success-icon-ring"></div>
+                        <div class="success-icon-checkmark"><i class="fa-solid fa-check"></i></div>
+                    </div>
+                    <h2>¡Mensaje Enviado con Éxito!</h2>
+                    <p>Muchas gracias por comunicarte con ServiRov. Tu solicitud de servicio ha sido ingresada en nuestro sistema de operaciones y te contactaremos en un momento.</p>
+                    <button class="btn-primary" id="btn-feedback-close">Entendido</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Premium -->
+    <footer id="main-footer">
+        <div class="container footer-content-padding">
+            <div class="grid-3 footer-grid">
+                <!-- Columna Logo y Descripción -->
+                <div class="footer-col" id="footer-col-logo">
+                    <a href="#inicio" class="logo-link margin-bottom-20 block">
+                        <img src="https://servirov.cl/wp-content/uploads/elementor/thumbs/25-x-50-logo-png-1-q8qnepaa5kz6ezvt1f55wevqy553rfwkocwaofuakg.png" alt="Servirov Logo" class="logo-img">
+                        <span class="logo-text">Servi<span>Rov</span></span>
+                    </a>
+                    <p class="footer-desc">Soluciones submarinas de alta tecnología y buceo comercial. Comprometidos con el desarrollo sustentable y la excelencia acuícola en la Región de Los Lagos.</p>
+                    <div class="footer-social-links">
+                        <a href="https://web.facebook.com/profile.php?id=100063456369725" target="_blank" rel="noopener noreferrer" aria-label="Facebook Servirov" class="social-icon-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://wa.me/56996299010" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp Servirov" class="social-icon-btn"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <!-- Columna Enlaces -->
+                <div class="footer-col" id="footer-col-links">
+                    <h4 class="footer-title">Mapa de Navegación</h4>
+                    <ul class="footer-links">
+                        <li><a href="#inicio" data-tab="inicio"><i class="fa-solid fa-chevron-right"></i> Inicio</a></li>
+                        <li><a href="#servicios" data-tab="servicios"><i class="fa-solid fa-chevron-right"></i> Servicios</a></li>
+                        <li><a href="#nosotros" data-tab="nosotros"><i class="fa-solid fa-chevron-right"></i> Nosotros</a></li>
+                        <li><a href="#contacto" data-tab="contacto"><i class="fa-solid fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna Contacto Rápido -->
+                <div class="footer-col" id="footer-col-contact">
+                    <h4 class="footer-title">Contacto Rápido</h4>
+                    <p class="footer-contact-item"><i class="fa-solid fa-phone text-accent"></i> +56 9 9629 9010</p>
+                    <p class="footer-contact-item"><i class="fa-solid fa-envelope text-accent"></i> contacto@servirov.cl</p>
+                    <p class="footer-contact-item"><i class="fa-solid fa-location-dot text-accent"></i> El Tepual N°8, Hornopirén</p>
+                </div>
+            </div>
+            
+            <div class="footer-copyright border-top border-glass margin-top-45 padding-top-25 text-center text-13 opacity-70">
+                <p>Copyright © 2026 ServiRov. Todos los derechos reservados. | Desarrollado por <a href="https://www.noweb.cl" target="_blank" rel="noopener noreferrer" style="color: var(--text-accent); font-weight: 600; text-decoration: underline;">Noweb Labs</a>.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Acciones Flotantes Activas -->
+    
+    <!-- WhatsApp Flotante Premium -->
+    <a href="https://wa.me/56996299010" class="whatsapp-floating-btn" target="_blank" rel="noopener noreferrer" aria-label="Contacto directo por WhatsApp" id="floating-whatsapp">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.414 0 .018 5.396.015 12.03c0 2.12.554 4.189 1.604 6.012L0 24l6.117-1.605a11.803 11.803 0 005.925 1.586h.005c6.635 0 12.033-5.396 12.036-12.03a11.82 11.82 0 00-3.617-8.53z"/>
+        </svg>
+        <span class="whatsapp-tooltip">¿En qué te ayudamos?</span>
+    </a>
+
+    <!-- Botón Volver Arriba -->
+    <button class="scroll-to-top-btn" id="btn-scroll-to-top" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
